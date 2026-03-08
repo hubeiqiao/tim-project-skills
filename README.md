@@ -1,6 +1,6 @@
 # TIM Project Skills
 
-Installable AI agent skills for Technology Innovation Management (TIM) project work, Gate 1 slide deck reviews, and targeted document troubleshooting.
+Installable AI agent skills for Technology Innovation Management (TIM) project work, Gate 1 slide deck reviews, and office-document workflows.
 
 This repository is designed for people who want to install a skill once and then ask their AI coding agent to use it directly.
 
@@ -8,6 +8,7 @@ This repository is designed for people who want to install a skill once and then
 
 - Structure and review a TIM project report.
 - Review or build a TIM Gate 1 slide deck.
+- Work with Word, PDF, and PowerPoint files.
 - Fix a specific `python-docx` style bug when low-level XML editing goes wrong.
 
 ## Before You Start
@@ -54,6 +55,9 @@ Examples:
 
 - `Use $tim-project-guide to help me structure my TIM report.`
 - `Use $g1-slide-deck-guide to review my Gate 1 presentation outline.`
+- `Use $docx to edit this Word document and preserve the formatting.`
+- `Use $pdf to extract the tables from this PDF.`
+- `Use $pptx to analyze this slide deck and summarize the notes.`
 - `Use $python-docx-style-id-mismatch to fix why my Heading 2 paragraphs keep turning into Normal text.`
 
 ## Skill Catalog
@@ -62,6 +66,9 @@ Examples:
 | --- | --- | --- |
 | `tim-project-guide` | TIM project report structure, formatting, and chapter expectations | `Use $tim-project-guide to review my chapter order and formatting.` |
 | `g1-slide-deck-guide` | TIM Gate 1 slide deck structure, required content, and review guidance | `Use $g1-slide-deck-guide to check whether my slides match the G1 format.` |
+| `docx` | Create, edit, review, and inspect `.docx` files | `Use $docx to revise this Word document and keep the layout clean.` |
+| `pdf` | Extract, split, merge, fill, and inspect PDF files | `Use $pdf to extract the tables and text from this PDF.` |
+| `pptx` | Create, edit, and inspect `.pptx` files | `Use $pptx to summarize this presentation and its speaker notes.` |
 | `python-docx-style-id-mismatch` | Fix the `python-docx` style-name vs style-ID bug | `Use $python-docx-style-id-mismatch to fix my custom heading insertion script.` |
 
 ## Troubleshooting
@@ -80,6 +87,16 @@ Install [Node.js](https://nodejs.org/) and open a new terminal window, then run 
 
 Run the installer again and choose the correct skill or agent target.
 
+### The skill installed, but the task still needs extra tools
+
+Some document skills may need extra local tools before they can do the work well.
+
+- `docx`: often works best with `python-docx`; `pandoc` helps with extraction.
+- `pdf`: often works best with `pypdf` and `pdfplumber`; scanned PDFs may also need OCR.
+- `pptx`: often works best with `python-pptx`; deeper inspection may also use ZIP or XML tools.
+
+The installation command only installs the skill instructions. Your AI agent may still need to install missing document-processing tools when it starts working.
+
 ### I want to see the available skills before installing
 
 Run:
@@ -92,12 +109,6 @@ npx skills add https://github.com/hubeiqiao/tim-project-skills --list
 
 The TIM-specific skills in this repository are adapted from TIM project guideline materials for the TIM report and Gate 1 slide deck.
 
-## Important License Review Note
-
-Some office-document skills in the local working collection include bundled `LICENSE.txt` files from upstream source materials that restrict redistribution. Those skills are not included in the current public test push until their licensing is resolved.
-
 ## License Notes
 
 Unless a file or subdirectory says otherwise, original repository-authored material is available under the root [MIT License](LICENSE).
-
-Some bundled skill directories also contain their own `LICENSE.txt` files. Those file-specific terms still apply to that directory.

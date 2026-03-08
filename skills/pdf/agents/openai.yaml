@@ -1,0 +1,4 @@
+interface:
+  display_name: "PDF Processing"
+  short_description: "Extract, fill, and transform PDF files"
+  default_prompt: "Use $pdf to extract, fill, split, merge, or inspect this PDF."

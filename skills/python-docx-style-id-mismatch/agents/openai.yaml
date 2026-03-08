@@ -1,0 +1,4 @@
+interface:
+  display_name: "python-docx Style ID Fix"
+  short_description: "Fix python-docx style ID bugs"
+  default_prompt: "Use $python-docx-style-id-mismatch to fix this python-docx style mismatch bug."

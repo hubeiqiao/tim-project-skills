@@ -1,0 +1,4 @@
+interface:
+  display_name: "TIM Project Guide"
+  short_description: "Guide TIM project report structure"
+  default_prompt: "Use $tim-project-guide to review or structure my TIM project report."

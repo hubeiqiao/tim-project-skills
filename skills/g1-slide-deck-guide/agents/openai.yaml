@@ -1,0 +1,4 @@
+interface:
+  display_name: "TIM G1 Slide Deck Guide"
+  short_description: "Review TIM Gate 1 slide decks"
+  default_prompt: "Use $g1-slide-deck-guide to review or outline my Gate 1 slide deck."

@@ -170,46 +170,36 @@ Summary of published research by scholars and experts. NOT a forum for personal 
 - Be answerable by the literature
 - Impact deliverable content or development process
 - Help deliverables address client pain or create value
+- Help understand or implement the results of your project
 
 **Structure (two approaches):**
 
-*Approach A - By stream (traditional, most common):*
+*Approach A - By stream (traditional; described by the newer guideline as used by "many strong projects"):*
 1. Summary table of literature review (row per stream, columns for highlights and citations)
 2. Method used to identify articles
 3. One section per stream
 4. Chapter summary
 
-*Approach B - Scoping or systematic review (use when the project requires a formal literature review with PRISMA/PRISMA-ScR reporting):*
+*Approach B - By review question (use when the project organizes the literature review around specific review questions and the answers from the literature):*
 
-1. **Introduction**
-   - Background and scope (the problem domain, what the review covers)
-   - Review objective (what the review aims to identify or synthesize)
-   - Research questions (structured using a framework such as PCC - Population, Concept, Context)
-2. **Methods**
-   - Review type and scope (scoping vs. systematic; justification for the choice)
-   - Literature search strategy (databases searched, date of last search, search terms, example search strings, filters applied, total records identified)
-   - Study selection process (PRISMA-ScR flow with numbers at each stage: identified, exported, de-duplicated, screened, assessed for eligibility, included)
-   - Inclusion and exclusion criteria (table format recommended)
-3. **Results**
-   - Overview of included studies (summary table with study details)
-   - Cross-study insights (patterns across the included studies)
-   - Demographic characteristics (population details of included studies)
-4. **Thematic sections** (as many as needed, organized by the review's findings)
-   - E.g., Theoretical Foundations, Instructional Mechanisms, Relationships between themes
-   - Each section synthesizes findings across studies, not study-by-study summaries
-5. **Key Findings** (numbered findings synthesized from the evidence)
-6. **Design Applications / Practical Implications** (literature-derived, NOT personal opinion; these are what the evidence suggests, not the author's interpretation)
-7. **Discussion** (within Ch2, distinct from Ch5 Discussion)
-   - Integration with existing literature
-   - Implications for the project domain
-   - Practical considerations
-   - Conflicts and tensions in the evidence
-   - Limitations of the review itself
-   - Directions for future research in the literature
-   - Ethical and bias considerations (if applicable)
-8. **Summary**
+The guideline describes this structure:
 
-**When to use Approach B:** Use when the project involves a formal scoping review or systematic review with PRISMA/PRISMA-ScR reporting. This approach is more structured and detailed than Approach A, and is appropriate when the literature review is itself a significant methodological contribution.
+1. **Introduction** — Provide background, explain the review's objective, and clearly define the client's problem. Present the review question(s) using a framework like PCC.
+2. **Methods** — Define your criteria for studies, including study types, participant groups, and expected outcomes. Explain the search methods (databases, keywords) and data collection strategies.
+3. **Results** — Present findings, cite the studies, and assess the risk of bias. Summarize and synthesize the results, breaking them down into their core components.
+4. **Conclusion** — Summarize the main findings and how they relate to your project's objectives.
+5. **Summary** — Provide a clear, brief overview that allows the reader to understand the core content without reading the entire chapter. Reflects the structure of the chapter. Avoids personal opinions or interpretations.
+
+**Practical extensions for formal scoping/systematic reviews:** When the project involves PRISMA/PRISMA-ScR reporting, consider expanding Approach B with these additional elements (derived from practice, not from the guideline text):
+
+- Under **Methods**: add search strategy detail (databases, search strings, PRISMA-ScR flow with numbers at each stage), inclusion/exclusion criteria table
+- Under **Results**: add overview of included studies table, cross-study insights, demographic characteristics
+- Add **Thematic sections** between Results and Conclusion (as many as needed, organized by findings — e.g., Theoretical Foundations, Mechanisms, Relationships). Synthesize across studies, not study-by-study.
+- Add **Key Findings** (numbered, synthesized from the evidence)
+- Add **Design Applications / Practical Implications** (literature-derived, NOT personal opinion)
+- Add **Discussion within Ch2** (distinct from Ch5): integration with existing literature, limitations of the review itself, future research directions in the literature
+
+**When to use Approach B:** Use when the project organizes the literature review around review questions rather than by stream. The formal scoping/systematic review extensions are appropriate when the literature review is itself a significant methodological contribution.
 
 **Key principles:**
 - Tables are intermediate products for organizing thinking; most won't appear in Ch2
@@ -228,19 +218,19 @@ Describes activities undertaken to produce deliverables. NO OUTCOMES in Ch3.
 3. Data acquisition - variables, measures, sources
 4. Data analysis - how data will be analyzed
 
-**Common patterns in Ch3:**
+**Common patterns in Ch3** (practical tips from completed projects, not from the guideline text):
 
-- **Data acquisition plan table:** Include a table specifying Variables, Operational Measures, and Sources. This makes the evaluation design explicit and traceable. Place this in the Research Design section (e.g., as Section 3.1.1).
-- **Data analysis plan:** Describe how each data type will be analyzed (descriptive statistics, thematic coding, funnel analysis, etc.) and what software tools will be used. Place this after the data acquisition plan (e.g., as Section 3.1.2).
-- **Ethical considerations:** Include a brief section explaining whether Research Ethics Board (REB) approval was required and why or why not. If the project uses standard commercial analytics rather than controlled experiments with human subjects, state this explicitly. Place this after the data analysis plan (e.g., as Section 3.1.3).
+- **Data acquisition plan table:** Include a table specifying Variables, Operational Measures, and Sources. This makes the evaluation design explicit and traceable. Place this in the Research Design section.
+- **Data analysis plan:** Describe how each data type will be analyzed (descriptive statistics, thematic coding, funnel analysis, etc.) and what software tools will be used.
+- **Ethical considerations:** Include a brief section explaining whether Research Ethics Board (REB) approval was required and why or why not. If the project uses standard commercial analytics rather than controlled experiments with human subjects, state this explicitly.
 - **Multi-layer framework pattern:** When the project produces a design framework (common in DSR), describe the layer structure in the relevant method step. For example, a theory-to-mechanism-to-feature-to-metric mapping creates a traceable chain from academic literature to measurable product outcomes. Each layer should be described as an activity in Ch3; the completed framework itself is reported in Ch4.
 
-**Sections:**
-1. **Research design** - rationale for chosen method; cite published articles using similar methods
-   - 3.1.1 Data acquisition plan (table: variables, measures, sources)
-   - 3.1.2 Data analysis plan (methods, tools, significance levels)
-   - 3.1.3 Ethical considerations (REB applicability statement)
-2. **Method visualization** - table/diagram/flowchart of steps, activities, outcomes
+**Sections (from the guideline):**
+1. **Research design** (before section 3.1) - rationale for chosen method; cite published articles using similar methods. This section may include:
+   - Data acquisition plan (table: variables, measures, sources)
+   - Data analysis plan (methods, tools, significance levels)
+   - Ethical considerations (REB applicability statement, if applicable)
+2. **Method visualization** (before section 3.1) - table/diagram/flowchart of steps, activities, outcomes
    - Must produce the deliverables from Ch1
    - Should match the SAR (Supervisor Assignment Report)
 3. **3.1, 3.2, 3.3...** - one section per step of the method, detailing:
@@ -249,6 +239,8 @@ Describes activities undertaken to produce deliverables. NO OUTCOMES in Ch3.
    - Statistical tests and significance levels
    - Software packages used
 4. **Summary**
+
+**Note:** The research design and method visualization come before section 3.1. Then sections 3.1, 3.2, 3.3, etc. each describe one step of the method. If you need subsections within a step, use 3.1.1, 3.1.2, etc.
 
 **Critical rules:**
 - Data acquisition != literature review (finding/reading articles is NOT data acquisition)
@@ -274,7 +266,7 @@ Reports outcomes of the research. Deliverables identified in Ch1, produced via C
 
 **Note:** The newer guideline ("Guidelines to Write") presents both approaches and notes that Approach 1 is used by most TIM projects. The older guideline ("TIM Project Report Guideline") presents only Approach 2 (by deliverables). Discuss with your supervisor which approach is best for your project.
 
-**Common result types and table patterns:**
+**Common result types and table patterns** (practical examples from completed projects, not from the guideline text):
 
 - **Competitive feature matrix** (ecosystem profiling outcome): Table comparing products across capability dimensions derived from the literature review. Follow with a market gap analysis narrative.
 - **Design framework / mapping table** (framework construction outcome): Table tracing theory to mechanism to feature to metric. Present the summary version in the chapter body; place the full mapping in an appendix.
@@ -283,7 +275,7 @@ Reports outcomes of the research. Deliverables identified in Ch1, produced via C
 - **Usage metrics tables** (evaluation outcome): Tables presenting acquisition funnel, feature usage counts, repeat behavior, revenue, and operational observations from the evaluation period.
 - **Investment/recommendation brief** (synthesis outcome): Structured assessment synthesizing findings from prior steps into actionable client guidance.
 
-**Guidance on presenting product/prototype results:**
+**Guidance on presenting product/prototype results** (practical tips, not from the guideline text):
 - Start with a product overview paragraph stating what was built, where it is deployed, and what it does
 - Include an architecture overview (technology stack diagram or description)
 - Present mechanism-to-feature implementation as a table showing how each theoretical mechanism maps to a specific product feature
@@ -322,7 +314,7 @@ The most important chapter for many readers.
 5. **Implications** - broader impact on field/industry; changes for future research, policy, practice
 6. **Summary**
 
-**Organizational tips from practice:**
+**Organizational tips from practice** (not from the guideline text, but based on completed projects):
 
 - **Organize around 2-3 strongest takeaways** rather than exhaustive coverage. State these takeaways in the opening paragraph and use them as the organizing logic for subsections. For example: "The discussion is organized around three main takeaways: (1) ..., (2) ..., (3) ..."
 - **Cross-reference Ch4 evidence explicitly.** Each interpretation claim should cite specific Ch4 sections, tables, or figures (e.g., "as shown in Table 4.1" or "the alpha data in Section 4.6.1").
@@ -419,7 +411,7 @@ Each template includes a detailed step-by-step table with columns: Steps, Activi
 
 ## 5. Common Supervisor Feedback Patterns
 
-Based on typical revision cycles, anticipate these common feedback areas:
+Based on revision cycles from completed TIM projects (practical guidance, not from the guideline documents), anticipate these common feedback areas:
 
 | Feedback Pattern | What It Means | How to Address |
 |-----------------|---------------|----------------|

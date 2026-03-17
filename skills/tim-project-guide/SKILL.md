@@ -28,6 +28,8 @@ This skill summarizes TIM project guideline materials for report formatting, rep
 3. TIM Project Report Guideline (older version, for reference)
 4. Research Method Templates
 
+**Note on guideline versions:** Where the newer and older guideline documents differ, this skill documents both versions and recommends confirming with your supervisor. Key differences are flagged inline.
+
 ---
 
 ## 1. Formatting Rules
@@ -96,6 +98,18 @@ Where the degree is one of:
 - No text or figures on backs of pages
 - Coloured illustrations allowed; avoid black backgrounds (poor scanning)
 
+### Table of Contents, List of Tables, List of Figures, List of Appendices
+
+**Building a Table of Contents that updates automatically should be one of your first tasks.** Both guideline versions emphasize this.
+
+- Use your word processor's built-in captioning, cross-reference, table of contents, and index features
+- When these features are used correctly, inserting, removing, or relocating a figure or table will auto-update captions, in-text cross-references, and lists with no manual changes required
+- The same approach applies to the List of Tables, List of Figures, and List of Appendices
+- **MS Word:** Insert > Table of Contents; use References tab for captions and cross-references
+- **LibreOffice Writer:** Insert > Table of Contents and Index
+
+**Important:** While you should set up the ToC structure early, **generate or update the final ToC, List of Tables, List of Figures, and List of Appendices as one of your last steps before submission.** Do not manually maintain these lists throughout the writing process — let the word processor generate them automatically from your headings and captions.
+
 ---
 
 ## 2. Report Structure
@@ -116,6 +130,8 @@ Where the degree is one of:
 - Definition (concise, contextualized)
 - Source (citation with page number)
 
+**Note on Glossary of Terms:** The newer guideline ("Guidelines to Write") includes the Glossary of Terms as an optional preliminary page placed immediately before Chapter 1. The older guideline ("TIM Project Report Guideline") does not mention a Glossary of Terms in the preliminary pages. If you plan to include a glossary, confirm with your supervisor that it is appropriate for your project.
+
 ### Chapter 1: Introduction
 
 Introduces topic, provides context, states objectives, deliverables, contribution, and importance.
@@ -135,6 +151,7 @@ Introduces topic, provides context, states objectives, deliverables, contributio
 6. **1.5 Contribution** - how the project advances knowledge
 7. **1.6 Overview of method** - brief overall statement of the method
 8. **1.7 Organization of the report** - one informative narrative paragraph (not a bulleted list)
+9. **1.8 Summary** - brief recap of the chapter's key points; transitions to Chapter 2
 
 ### Chapter 2: Literature Review
 
@@ -162,12 +179,37 @@ Summary of published research by scholars and experts. NOT a forum for personal 
 3. One section per stream
 4. Chapter summary
 
-*Approach B - By review question:*
-1. Introduction (background, objective, define client problem, present review questions using PCC)
-2. Methods (criteria for studies, search methods, databases, keywords)
-3. Results (present findings, cite studies, assess bias, synthesize)
-4. Conclusion (main findings related to objectives)
-5. Summary
+*Approach B - Scoping or systematic review (use when the project requires a formal literature review with PRISMA/PRISMA-ScR reporting):*
+
+1. **Introduction**
+   - Background and scope (the problem domain, what the review covers)
+   - Review objective (what the review aims to identify or synthesize)
+   - Research questions (structured using a framework such as PCC - Population, Concept, Context)
+2. **Methods**
+   - Review type and scope (scoping vs. systematic; justification for the choice)
+   - Literature search strategy (databases searched, date of last search, search terms, example search strings, filters applied, total records identified)
+   - Study selection process (PRISMA-ScR flow with numbers at each stage: identified, exported, de-duplicated, screened, assessed for eligibility, included)
+   - Inclusion and exclusion criteria (table format recommended)
+3. **Results**
+   - Overview of included studies (summary table with study details)
+   - Cross-study insights (patterns across the included studies)
+   - Demographic characteristics (population details of included studies)
+4. **Thematic sections** (as many as needed, organized by the review's findings)
+   - E.g., Theoretical Foundations, Instructional Mechanisms, Relationships between themes
+   - Each section synthesizes findings across studies, not study-by-study summaries
+5. **Key Findings** (numbered findings synthesized from the evidence)
+6. **Design Applications / Practical Implications** (literature-derived, NOT personal opinion; these are what the evidence suggests, not the author's interpretation)
+7. **Discussion** (within Ch2, distinct from Ch5 Discussion)
+   - Integration with existing literature
+   - Implications for the project domain
+   - Practical considerations
+   - Conflicts and tensions in the evidence
+   - Limitations of the review itself
+   - Directions for future research in the literature
+   - Ethical and bias considerations (if applicable)
+8. **Summary**
+
+**When to use Approach B:** Use when the project involves a formal scoping review or systematic review with PRISMA/PRISMA-ScR reporting. This approach is more structured and detailed than Approach A, and is appropriate when the literature review is itself a significant methodological contribution.
 
 **Key principles:**
 - Tables are intermediate products for organizing thinking; most won't appear in Ch2
@@ -186,8 +228,18 @@ Describes activities undertaken to produce deliverables. NO OUTCOMES in Ch3.
 3. Data acquisition - variables, measures, sources
 4. Data analysis - how data will be analyzed
 
+**Common patterns in Ch3:**
+
+- **Data acquisition plan table:** Include a table specifying Variables, Operational Measures, and Sources. This makes the evaluation design explicit and traceable. Place this in the Research Design section (e.g., as Section 3.1.1).
+- **Data analysis plan:** Describe how each data type will be analyzed (descriptive statistics, thematic coding, funnel analysis, etc.) and what software tools will be used. Place this after the data acquisition plan (e.g., as Section 3.1.2).
+- **Ethical considerations:** Include a brief section explaining whether Research Ethics Board (REB) approval was required and why or why not. If the project uses standard commercial analytics rather than controlled experiments with human subjects, state this explicitly. Place this after the data analysis plan (e.g., as Section 3.1.3).
+- **Multi-layer framework pattern:** When the project produces a design framework (common in DSR), describe the layer structure in the relevant method step. For example, a theory-to-mechanism-to-feature-to-metric mapping creates a traceable chain from academic literature to measurable product outcomes. Each layer should be described as an activity in Ch3; the completed framework itself is reported in Ch4.
+
 **Sections:**
 1. **Research design** - rationale for chosen method; cite published articles using similar methods
+   - 3.1.1 Data acquisition plan (table: variables, measures, sources)
+   - 3.1.2 Data analysis plan (methods, tools, significance levels)
+   - 3.1.3 Ethical considerations (REB applicability statement)
 2. **Method visualization** - table/diagram/flowchart of steps, activities, outcomes
    - Must produce the deliverables from Ch1
    - Should match the SAR (Supervisor Assignment Report)
@@ -210,15 +262,34 @@ Reports outcomes of the research. Deliverables identified in Ch1, produced via C
 
 **Two organizational approaches:**
 
-*Approach 1 - By method steps (preferred by most TIM projects):*
+*Approach 1 - By method steps (preferred by most TIM projects; recommended by newer guideline):*
 - 4.1 = outcomes of step 1
 - 4.2 = outcomes of step 2, etc.
 - Easiest for reader to connect outcomes to method activities
 
-*Approach 2 - By deliverables:*
+*Approach 2 - By deliverables (the only approach in the older guideline):*
 - 4.1 = results for deliverable 1
 - 4.2 = results for deliverable 2, etc.
 - Fewer but longer sections
+
+**Note:** The newer guideline ("Guidelines to Write") presents both approaches and notes that Approach 1 is used by most TIM projects. The older guideline ("TIM Project Report Guideline") presents only Approach 2 (by deliverables). Discuss with your supervisor which approach is best for your project.
+
+**Common result types and table patterns:**
+
+- **Competitive feature matrix** (ecosystem profiling outcome): Table comparing products across capability dimensions derived from the literature review. Follow with a market gap analysis narrative.
+- **Design framework / mapping table** (framework construction outcome): Table tracing theory to mechanism to feature to metric. Present the summary version in the chapter body; place the full mapping in an appendix.
+- **Decision matrix** (technology selection outcome): Table comparing technology candidates or design alternatives against evaluation criteria (cost, accuracy, scalability, alignment with framework).
+- **Product/prototype presentation** (build outcome): Include architecture overview, key feature descriptions, mechanism-to-feature implementation mapping, product specifications (tech stack, deployment details), and screenshots/figures.
+- **Usage metrics tables** (evaluation outcome): Tables presenting acquisition funnel, feature usage counts, repeat behavior, revenue, and operational observations from the evaluation period.
+- **Investment/recommendation brief** (synthesis outcome): Structured assessment synthesizing findings from prior steps into actionable client guidance.
+
+**Guidance on presenting product/prototype results:**
+- Start with a product overview paragraph stating what was built, where it is deployed, and what it does
+- Include an architecture overview (technology stack diagram or description)
+- Present mechanism-to-feature implementation as a table showing how each theoretical mechanism maps to a specific product feature
+- Include product screenshots or figures with descriptive captions
+- Report product specifications (languages, frameworks, databases, APIs, hosting)
+- Keep all descriptions factual and past tense; do not interpret whether the product "succeeded"
 
 **Writing rules:**
 - Always written in past tense (completed work)
@@ -251,6 +322,13 @@ The most important chapter for many readers.
 5. **Implications** - broader impact on field/industry; changes for future research, policy, practice
 6. **Summary**
 
+**Organizational tips from practice:**
+
+- **Organize around 2-3 strongest takeaways** rather than exhaustive coverage. State these takeaways in the opening paragraph and use them as the organizing logic for subsections. For example: "The discussion is organized around three main takeaways: (1) ..., (2) ..., (3) ..."
+- **Cross-reference Ch4 evidence explicitly.** Each interpretation claim should cite specific Ch4 sections, tables, or figures (e.g., "as shown in Table 4.1" or "the alpha data in Section 4.6.1").
+- **Comparison with previous research (Section 5.3):** Organize by theme rather than by individual source. Reference specific studies from Ch2 streams. Compare what the Ch2 literature predicted with what Ch4 actually showed.
+- **Speculation rules:** In the "Explanation of unexpected findings" section, speculation IS permitted but must be clearly labeled. In the "Interpretation of results" section, claims must be anchored in Ch4 evidence. In "Implications," broader claims are acceptable but should reference the evidence base.
+
 ### Chapter 6: Conclusions, Limitations, and Future Research
 
 Three sections:
@@ -265,11 +343,14 @@ Three sections:
 
 3. **Future Research**
    - Ways future TIM students can overcome the identified limitations
+   - **Each limitation should map to at least one future research item.** The future research section should follow a logical sequence implied by the limitations and current results.
+   - Future research items may also include next steps beyond the limitations (e.g., extending to new markets, adding new data collection methods)
+   - Number the items for clarity and traceability to the limitations
 
 ### References
 - Provide both in-text citations and a reference list
 - **Recommended style: Academy of Management (AoM)** - resource: https://library.carleton.ca/guides/help/aom
-  - Note: An older guideline version recommends Harvard style; confirm with supervisor
+  - **Note:** The newer guideline recommends AoM style. The older guideline recommends Harvard style. Confirm with your supervisor which citation style to use.
 - Alphabetical order by first author's last name
 - Every reference must be cited at least once; every citation must have a reference
 - Consistent citation style throughout
@@ -296,6 +377,9 @@ These alignment requirements are non-negotiable:
 | **Ch4 objectivity** | No interpretation in Ch4; save for Ch5 |
 | **Ch2 objectivity** | No personal opinions in Ch2; save for Ch5 |
 | **Method-results mirror** | Ch3 and Ch4 structure should mirror each other |
+| **Limitation-future research mapping** | Each limitation in Ch6 should map to at least one future research item |
+| **Ch5 anchored in Ch2** | Ch5 comparison must reference specific sources from Ch2 streams |
+| **Every chapter has a summary** | Every chapter must end with a Summary section that recaps key points and transitions to the next chapter |
 
 ### Table/Figure/Appendix Numbering
 
@@ -333,10 +417,30 @@ Each template includes a detailed step-by-step table with columns: Steps, Activi
 
 ---
 
-## 5. Quick Reference Checklist
+## 5. Common Supervisor Feedback Patterns
+
+Based on typical revision cycles, anticipate these common feedback areas:
+
+| Feedback Pattern | What It Means | How to Address |
+|-----------------|---------------|----------------|
+| **Tighten terminology** | Technical terms used without definition, or terms used inconsistently | Define every technical term at first use; maintain a glossary; use consistent terminology throughout |
+| **Make DSR iteration explicit** | The report presents the method as purely linear | Acknowledge where iteration occurred (e.g., "Steps 5 and 6 included iterative refinement, with deployment observations informing adjustments") |
+| **Identify 2-3 strongest takeaways** | Ch4/Ch5 lack a clear organizing logic | State the takeaways explicitly in Ch4 summary and Ch5 opening; use them to organize Ch5 subsections |
+| **Activities leaked into Ch4** | Ch4 contains descriptions of what was done (activities) rather than what was found (outcomes) | Review every Ch4 paragraph: if it describes a process or procedure, move it to Ch3 |
+| **Outcomes leaked into Ch3** | Ch3 reveals results before they should appear | Review every Ch3 paragraph: if it states a finding or conclusion, move it to Ch4 |
+| **Table formatting inconsistency** | Tables use different styles, column naming, or alignment | Audit all tables for consistent formatting, column headers, and numbering style |
+| **Ch2 contains personal opinions** | Interpretive language ("this shows that..." or "clearly...") in the literature review | Replace with objective synthesis language; save interpretation for Ch5 |
+| **Ch5 not anchored in Ch4** | Discussion makes claims without cross-referencing specific results | Add explicit cross-references (section numbers, table numbers, figure numbers) for every interpretive claim |
+| **Limitations-future research mismatch** | Limitations and future research items are disconnected | Ensure each limitation maps to at least one future research item |
+| **Summary sections missing or weak** | Chapter summaries are absent or merely restate the section headings | Every chapter must end with a summary that recaps key points and transitions to the next chapter |
+
+---
+
+## 6. Quick Reference Checklist
 
 Use this when reviewing any section of the report:
 
+### Structure and Formatting
 - [ ] Deliverables identical in Ch1, Ch3 method table, and Ch4
 - [ ] Abstract <= 150 words with all 5 required elements
 - [ ] Title page uses correct statement (project vs. thesis)
@@ -344,13 +448,28 @@ Use this when reviewing any section of the report:
 - [ ] Body pages numbered with Arabic numerals starting at 1
 - [ ] Margins: 1.5" left, 1" other three sides
 - [ ] Double-spaced text, 12pt font
+- [ ] ToC, List of Tables, List of Figures, List of Appendices generated automatically as final step before submission
+- [ ] Tables/figures properly numbered and labeled (confirm numbering version with supervisor)
+
+### Chapter Content
+- [ ] Ch1 includes a 1.8 Summary section
 - [ ] Ch2 contains only literature review (no opinions)
+- [ ] Ch2 Approach B includes PRISMA-ScR flow with numbers at each stage (if applicable)
 - [ ] Ch3 contains only activities (no outcomes)
+- [ ] Ch3 includes data acquisition plan table, data analysis plan, and ethical considerations
 - [ ] Ch4 contains only outcomes (no activities), past tense, no interpretation
+- [ ] Ch4 presents product/prototype results with architecture overview and mechanism-to-feature mapping (if applicable)
 - [ ] Ch5 interprets results and compares with Ch2 literature
+- [ ] Ch5 organized around 2-3 strongest takeaways with explicit Ch4 cross-references
 - [ ] Ch6 has exactly 3 sections: Conclusions, Limitations, Future Research
-- [ ] All citations have corresponding references and vice versa
-- [ ] Consistent citation style throughout (AoM recommended)
+- [ ] Ch6 limitations each map to at least one future research item
 - [ ] Each chapter ends with a summary section
-- [ ] Tables/figures properly numbered and labeled
+
+### Citations and References
+- [ ] All citations have corresponding references and vice versa
+- [ ] Consistent citation style throughout (AoM recommended by newer guideline; confirm with supervisor)
+- [ ] All technical terms defined at first use
+- [ ] DSR iteration acknowledged where applicable
+
+### Appendices
 - [ ] Appendices each on separate page, one topic per appendix

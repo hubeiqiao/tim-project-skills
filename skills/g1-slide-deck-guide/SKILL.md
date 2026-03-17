@@ -325,3 +325,36 @@ On Slide 4, each "Not Known" item should:
 - [ ] Preliminary results are shown (not just planned work)
 - [ ] Pathway-specific requirements are addressed
 - [ ] Project novelty is clearly explained
+
+---
+
+## 8. Presentation and Q&A Tips
+
+### Time Management
+- Practice the full presentation to fit within 10 minutes. A common pitfall is spending too long on early slides (problem, literature) and rushing through results.
+- Rough allocation for 10 minutes:
+  - 1 min: Title, objective, deliverables
+  - 1 min: Relevance to client
+  - 1 min: Problem and gap
+  - 1-2 min: Literature review
+  - 2 min: Research method, data acquisition, data analysis
+  - 3-4 min: Results (deliverables)
+  - 1 min: Novelty, limitations, future research
+- The results slides are the most important — allocate the most time to them.
+
+### Common Q&A Topics
+Prepare answers for these frequently asked questions:
+- **Method justification:** "Why did you choose this method over alternatives?"
+- **Data validity:** "How do you know your data is reliable?" or "What are the limitations of your data sources?"
+- **Feasibility:** "Can you complete all deliverables in 13 weeks?"
+- **Scope:** "Is this too ambitious/too narrow?" or "How will you handle it if X doesn't work?"
+- **Literature gaps:** "What does the literature say about Y?" (where Y is tangentially related to your topic)
+- **Client value:** "How specifically will the client use your deliverables?"
+- **Pathway alignment:** "How does this meet the [MEng/MDTE/etc.] requirements?"
+
+### Backup Slides
+Consider preparing 2-3 backup slides (placed after the References slide) for anticipated tough questions:
+- Detailed methodology breakdown (if the main deck only has the summary table)
+- Additional literature review sources (if questioned about coverage)
+- Risk mitigation plan (if asked about feasibility concerns)
+- Detailed data acquisition or analysis steps (if questioned about rigor)

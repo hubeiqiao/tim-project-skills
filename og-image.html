@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<title>TIM Project Skills — OG Image</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #f5f5f7;
+    color: #1d1d1f;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    width: 1280px;
+    height: 640px;
+    overflow: hidden;
+  }
+
+  .grid {
+    display: grid;
+    width: 1280px;
+    height: 640px;
+    padding: 24px;
+    gap: 6px;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "hero    guide    evaluate"
+      "hero    scripts  evaluate"
+      "install scripts  checklist";
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px 24px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #86868b;
+    margin-bottom: 6px;
+  }
+
+  .card-title {
+    font-family: 'Sora', system-ui, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    color: #6e6e73;
+    line-height: 1.45;
+  }
+
+  .pill {
+    display: inline-block;
+    background: #f0f0f2;
+    color: #6e6e73;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  /* Hero */
+  .hero {
+    grid-area: hero;
+    justify-content: center;
+    padding: 36px 32px;
+    background: #fff;
+    border-top: 4px solid #0071e3;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f0f0f2;
+    padding: 5px 12px;
+    border-radius: 16px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #6e6e73;
+    width: fit-content;
+    margin-bottom: 16px;
+  }
+  .hero-title {
+    font-family: 'Sora', system-ui, sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: #1d1d1f;
+    margin-bottom: 14px;
+  }
+  .hero-title span { color: #0071e3; }
+  .hero-sub {
+    font-size: 16px;
+    color: #86868b;
+    line-height: 1.5;
+    max-width: 340px;
+  }
+
+  /* Guide card */
+  .guide {
+    grid-area: guide;
+    justify-content: center;
+    border-left: 3px solid #0071e3;
+  }
+  .guide .card-title {
+    font-size: 18px;
+    color: #1d1d1f;
+    margin-bottom: 6px;
+  }
+  .guide .num {
+    font-family: 'Sora', system-ui, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #0071e3;
+    letter-spacing: -0.03em;
+    margin-bottom: 2px;
+  }
+
+  /* Evaluate card */
+  .evaluate {
+    grid-area: evaluate;
+    justify-content: center;
+    border-left: 3px solid #34d399;
+  }
+  .evaluate .card-title {
+    font-size: 17px;
+    color: #1d1d1f;
+    margin-bottom: 6px;
+  }
+  .eval-items {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 6px;
+  }
+  .eval-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #6e6e73;
+  }
+  .eval-pass {
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: #34d399;
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+  .eval-fail {
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: #ff6b6b;
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+
+  /* Scripts card */
+  .scripts {
+    grid-area: scripts;
+    justify-content: center;
+    border-left: 3px solid #bf5af2;
+  }
+  .scripts .card-title {
+    font-size: 17px;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+  }
+  .script-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .script-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .script-name {
+    font-family: 'DM Sans', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1d1d1f;
+    background: #f0f0f2;
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+  .script-desc {
+    font-size: 11px;
+    color: #86868b;
+  }
+
+  /* Install card */
+  .install {
+    grid-area: install;
+    justify-content: center;
+    background: #1d1d1f;
+  }
+  .install .label { color: #86868b; }
+  .install-cmd {
+    font-family: 'DM Sans', monospace;
+    font-size: 13px;
+    color: #34d399;
+    margin-top: 4px;
+  }
+
+  /* Checklist card */
+  .checklist {
+    grid-area: checklist;
+    justify-content: center;
+    background: #fff;
+    border-left: 3px solid #ff6b6b;
+  }
+  .checklist .card-title {
+    font-size: 17px;
+    color: #1d1d1f;
+    margin-bottom: 4px;
+  }
+  .check-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-top: 6px;
+  }
+  .check-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background: #34d399;
+  }
+  .check-dot.fail { background: #ff6b6b; }
+</style>
+</head>
+<body>
+<div class="grid">
+
+  <!-- Hero -->
+  <div class="card hero">
+    <div class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" fill="#86868b"/></svg>
+      Open Source
+    </div>
+    <div class="hero-title">TIM Project<br><span>Skills</span></div>
+    <div class="hero-sub">AI agent skills for structuring, evaluating, and submitting Carleton TIM project reports</div>
+  </div>
+
+  <!-- Guide -->
+  <div class="card guide">
+    <div class="label">Report Guide</div>
+    <div class="num">9 Sections</div>
+    <div class="card-desc">Ch1-Ch6 structure, formatting rules, alignment checks, method templates</div>
+  </div>
+
+  <!-- Evaluate -->
+  <div class="card evaluate">
+    <div class="label">Compliance Audit</div>
+    <div class="card-title">25-Item Checklist</div>
+    <div class="eval-items">
+      <div class="eval-item"><span class="eval-pass">PASS</span> Abstract ≤ 150 words</div>
+      <div class="eval-item"><span class="eval-pass">PASS</span> Deliverables match Ch1/Ch3/Ch4</div>
+      <div class="eval-item"><span class="eval-fail">FAIL</span> Ch1.7 is one paragraph</div>
+      <div class="eval-item"><span class="eval-pass">PASS</span> Ch5 cross-references</div>
+      <div class="eval-item"><span class="eval-pass">PASS</span> Every chapter has Summary</div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <div class="card scripts">
+    <div class="label">Python Scripts</div>
+    <div class="card-title">Automate Checks</div>
+    <div class="script-list">
+      <div class="script-item">
+        <span class="script-name">evaluate</span>
+        <span class="script-desc">17 auto-checks on .md drafts</span>
+      </div>
+      <div class="script-item">
+        <span class="script-name">generate</span>
+        <span class="script-desc">Report skeleton with headings</span>
+      </div>
+      <div class="script-item">
+        <span class="script-name">verify</span>
+        <span class="script-desc">.docx → pandoc → audit + diff</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Install -->
+  <div class="card install">
+    <div class="label">Install</div>
+    <div class="install-cmd">npx skills add hubeiqiao/tim-project-skills</div>
+  </div>
+
+  <!-- Checklist visual -->
+  <div class="card checklist">
+    <div class="label">Submission Checklist</div>
+    <div class="card-title">Final Pre-Submit</div>
+    <div class="card-desc">Margins, pagination, ToC, title page, references</div>
+  </div>
+
+</div>
+</body>
+</html>

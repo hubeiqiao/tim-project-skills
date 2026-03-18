@@ -2,11 +2,13 @@
 
 Installable AI agent skills for Technology Innovation Management (TIM) project work, Gate 1 slide deck reviews, and targeted document troubleshooting.
 
+![TIM Project Skills](og-image.png)
+
 This repository is designed for people who want to install a skill once and then ask their AI coding agent to use it directly.
 
 ## What These Skills Help With
 
-- Structure and review a TIM project report.
+- Structure, evaluate, and submit a TIM project report — 9-section guide, 25-item compliance checklist, and 3 Python scripts.
 - Review or build a TIM Gate 1 slide deck.
 - Fix a specific `python-docx` style bug when low-level XML editing goes wrong.
 

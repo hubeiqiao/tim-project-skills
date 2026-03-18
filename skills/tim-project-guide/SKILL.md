@@ -1,6 +1,6 @@
 ---
 name: tim-project-guide
-description: "Use when structuring, formatting, or reviewing a Technology Innovation Management (TIM) project report for Carleton University - provides report rules, chapter guidance, literature review expectations, and research method templates."
+description: "Use when structuring, formatting, evaluating, or reviewing a Technology Innovation Management (TIM) project report for Carleton University — provides report rules, chapter guidance, literature review expectations, research method templates, and a compliance-audit checklist."
 ---
 
 # TIM Project Report Guide
@@ -17,6 +17,8 @@ Use the exact skill name `$tim-project-guide` in your prompt. Include whether yo
 - `Use $tim-project-guide to help me write the Introduction chapter for my TIM report.`
 - `Use $tim-project-guide to review my abstract against the TIM requirements.`
 - `Use $tim-project-guide to compare my literature review plan against the guideline.`
+- `Use $tim-project-guide to evaluate my completed TIM report.`
+- `Use $tim-project-guide to run a compliance audit on my TIM report before submission.`
 
 ## Source and Scope
 
@@ -100,19 +102,41 @@ Where the degree is one of:
 
 ### Table of Contents, List of Tables, List of Figures, List of Appendices
 
-**Building a Table of Contents that updates automatically should be one of your first tasks.** Both guideline versions emphasize this.
+**Heading styles are the foundation — use them from day one.** Apply Heading 1 for chapter titles, Heading 2 for sections (1.1, 2.3, etc.), and Heading 3 for subsections. Never format a heading by manually changing font size and bolding — always use the built-in heading styles. This single habit makes everything below work automatically.
 
-- Use your word processor's built-in captioning, cross-reference, table of contents, and index features
-- When these features are used correctly, inserting, removing, or relocating a figure or table will auto-update captions, in-text cross-references, and lists with no manual changes required
-- The same approach applies to the List of Tables, List of Figures, and List of Appendices
-- **MS Word:** Insert > Table of Contents; use References tab for captions and cross-references
+**Create the ToC once, early:**
+- **MS Word:** References > Table of Contents > insert an automatic style
 - **LibreOffice Writer:** Insert > Table of Contents and Index
 
-**Important:** While you should set up the ToC structure early, **generate or update the final ToC, List of Tables, List of Figures, and List of Appendices as one of your last steps before submission.** Do not manually maintain these lists throughout the writing process — let the word processor generate them automatically from your headings and captions.
+The ToC is a permanent element of your document. You do not recreate it; you update it.
+
+**Use Insert Caption for all tables and figures.** This auto-generates the List of Tables and List of Figures via the same References > Insert Table of Figures dialog. Never type "Table 1:" or "Figure 3:" by hand.
+
+**Never type ToC entries manually.** If a heading does not appear in the ToC, the fix is to apply the correct heading style — not to type the entry into the ToC.
+
+**Final step before submission — update all fields:**
+1. Select all (Ctrl+A / Cmd+A)
+2. Update fields (F9 on Windows; Cmd+Option+Shift+U on Mac; or right-click any field > Update Field)
+3. For the ToC specifically: right-click > Update Field > "Update Entire Table"
+
+This single action refreshes the ToC, List of Tables, List of Figures, List of Appendices, all cross-references, and all caption numbers. Do this as one of your very last steps before generating the PDF for submission.
 
 ---
 
 ## 2. Report Structure
+
+### Getting Started
+
+The guidelines recommend this preparation sequence:
+1. **Write the abstract first** — update frequently as you make progress (from both guidelines)
+2. **Draft the four starting points for Ch1** before writing the chapter: purpose, deliverables, contributions, audience profiles (from both guidelines)
+3. **Draft the four starting points for Ch3** before writing it: research design, method table, data acquisition plan, data analysis plan (from both guidelines)
+4. **Build the Table of Contents structure early** using heading styles (from both guidelines)
+5. **Use the report shell** as a structural starting point — each chapter starts on a new page with the required section headings (from both guidelines; see `scripts/generate_shell.py`)
+
+**Example reports** for reference (if available in your Guidelines directory):
+- Guilherme Barbassa (MEng, 2024) — Product-Market Fit Analysis
+- Naznoosh Mohammad Zadeh (MEng, 2025) — CRA project
 
 ### Preliminary Pages (in order)
 
@@ -145,13 +169,14 @@ Introduces topic, provides context, states objectives, deliverables, contributio
    - Previous attempts to solve the problem
    - Insights from scholarly literature
 2. **1.1 Objective** - what the project accomplishes
-3. **1.2 Deliverables** - bulleted list; 2-4 typical; provided in Ch4; must support the objective
+3. **1.2 Deliverables** - bulleted list; 2-4 typical; provided in Ch4; must support the objective. *(From newer guideline: deliverables should be consistent with those of the G0 slide deck and the SAR.)*
 4. **1.3 Relevance** - relevance to client and client manager; evidence of interest; potential value
 5. **1.4 What is known and not known** - state of current knowledge (theory and practice); emphasize peer-reviewed research
 6. **1.5 Contribution** - how the project advances knowledge
 7. **1.6 Overview of method** - brief overall statement of the method
 8. **1.7 Organization of the report** - one informative narrative paragraph (not a bulleted list)
-9. **1.8 Summary** - brief recap of the chapter's key points; transitions to Chapter 2
+   > **Common mistake:** "One informative narrative paragraph" means exactly ONE paragraph — not one paragraph per chapter and not a bulleted list. A single flowing paragraph that walks the reader through the report structure.
+9. **1.8 Summary** - brief recap of the chapter's key points; transitions to Chapter 2 *(recommended from practice; not explicitly listed in either guideline for Ch1, but listed for Ch3–5)*
 
 ### Chapter 2: Literature Review
 
@@ -212,6 +237,8 @@ The guideline describes this structure:
 
 Describes activities undertaken to produce deliverables. NO OUTCOMES in Ch3.
 
+> **Guideline tension:** The method table lists an "Outcomes" column for each step (from the guideline). The narrative text of each section should describe only activities. Outcomes listed in the method table are reported in detail in Ch4. This means the method table previews what each step produces, but the Ch3 narrative focuses on *how* the work was done, not *what* was found.
+
 **Four foundational parts to draft first:**
 1. Research design - overall design rationale
 2. Method table - steps, activities, outcomes
@@ -233,6 +260,7 @@ Describes activities undertaken to produce deliverables. NO OUTCOMES in Ch3.
 2. **Method visualization** (before section 3.1) - table/diagram/flowchart of steps, activities, outcomes
    - Must produce the deliverables from Ch1
    - Should match the SAR (Supervisor Assignment Report)
+   - **Structure note (from newer guideline):** "The steps will provide the structure for the sections of chapter 3 and also the sections of chapter 4." Each method step becomes a section in both Ch3 and Ch4.
 3. **3.1, 3.2, 3.3...** - one section per step of the method, detailing:
    - Activities at each step
    - Variables used
@@ -247,6 +275,8 @@ Describes activities undertaken to produce deliverables. NO OUTCOMES in Ch3.
 - Data analysis != literature review
 - Do not confuse data acquisition with data analysis
 - NO outcomes in Ch3; outcomes go in Ch4
+
+**Data acquisition nuance (from newer guideline):** Some projects acquire and analyze data in a single step; others spread data acquisition and analysis across multiple steps. Structure your method table to reflect your project's actual workflow — there is no single correct pattern.
 
 ### Chapter 4: Results
 
@@ -265,6 +295,8 @@ Reports outcomes of the research. Deliverables identified in Ch1, produced via C
 - Fewer but longer sections
 
 **Note:** The newer guideline ("Guidelines to Write") presents both approaches and notes that Approach 1 is used by most TIM projects. The older guideline ("TIM Project Report Guideline") presents only Approach 2 (by deliverables). Discuss with your supervisor which approach is best for your project.
+
+**Gate 1 vs. Final Report:** The newer guideline notes: "For the gate 1 report, include completed and in-progress steps. For the final report, include all steps." Plan your Ch4 draft accordingly — a gate 1 submission may have partial results.
 
 **Common result types and table patterns** (practical examples from completed projects, not from the guideline text):
 
@@ -321,6 +353,8 @@ The most important chapter for many readers.
 - **Comparison with previous research (Section 5.3):** Organize by theme rather than by individual source. Reference specific studies from Ch2 streams. Compare what the Ch2 literature predicted with what Ch4 actually showed.
 - **Speculation rules:** In the "Explanation of unexpected findings" section, speculation IS permitted but must be clearly labeled. In the "Interpretation of results" section, claims must be anchored in Ch4 evidence. In "Implications," broader claims are acceptable but should reference the evidence base.
 
+> **Common mistake:** Step-number references (e.g., "Step 1 showed…") are NOT sufficient cross-references. Use specific section numbers, table numbers, and figure numbers (e.g., "as shown in Table 4.1" or "the retention data in Section 4.6.1"). The reader should be able to locate the exact evidence without searching.
+
 ### Chapter 6: Conclusions, Limitations, and Future Research
 
 Three sections:
@@ -335,9 +369,11 @@ Three sections:
 
 3. **Future Research**
    - Ways future TIM students can overcome the identified limitations
-   - **Each limitation should map to at least one future research item.** The future research section should follow a logical sequence implied by the limitations and current results.
+   - **Each limitation should map to at least one future research item** (from guideline: "ways future TIM students can overcome the identified limitations"). The logical-sequence emphasis and numbering convention are from practice.
    - Future research items may also include next steps beyond the limitations (e.g., extending to new markets, adding new data collection methods)
-   - Number the items for clarity and traceability to the limitations
+   - Number the items for clarity and traceability to the limitations *(from practice)*
+
+> **Common mistake:** Even the concluding chapter benefits from a Summary section. A brief closing paragraph that restates the project's contribution and ends the report cleanly is recommended from practice, though not explicitly required by the guideline.
 
 ### References
 - Provide both in-text citations and a reference list
@@ -371,7 +407,7 @@ These alignment requirements are non-negotiable:
 | **Method-results mirror** | Ch3 and Ch4 structure should mirror each other |
 | **Limitation-future research mapping** | Each limitation in Ch6 should map to at least one future research item |
 | **Ch5 anchored in Ch2** | Ch5 comparison must reference specific sources from Ch2 streams |
-| **Every chapter has a summary** | Every chapter must end with a Summary section that recaps key points and transitions to the next chapter |
+| **Every chapter has a summary** | Every chapter must end with a Summary section that recaps key points and transitions to the next chapter. *(Ch3/4/5 summaries are from the guideline; Ch1/2/6 summaries are recommended from practice.)* |
 
 ### Table/Figure/Appendix Numbering
 
@@ -465,3 +501,143 @@ Use this when reviewing any section of the report:
 
 ### Appendices
 - [ ] Appendices each on separate page, one topic per appendix
+
+---
+
+## 7. Report Evaluation Workflow
+
+Use this section to run a formal PASS/FAIL compliance audit on a completed TIM report. This is the same checklist used in Section 6, applied as a structured evaluation process.
+
+### How to Run an Evaluation
+
+1. **Read every chapter** of the report (markdown drafts or the .docx file).
+2. **Evaluate each item** in the checklist below against the actual report content.
+3. **Assign PASS or FAIL** to each item. A FAIL requires a specific reason.
+4. **Produce a summary table** with the format below.
+
+### Evaluation Output Format
+
+| # | Check | Result | Evidence / Reason |
+|---|-------|--------|-------------------|
+| 1 | Abstract ≤ 150 words, 5 elements | PASS | 142 words; all 5 elements present |
+| 2 | Deliverables identical Ch1/Ch3/Ch4 | FAIL | Ch3 table says "Design Framework"; Ch1 says "Evidence-Based Design Framework" |
+| ... | ... | ... | ... |
+
+### Items Most Likely to Fail
+
+Based on evaluation experience with a completed TIM report, these items are the most common failure points:
+
+| Item | Why It Fails | What to Check |
+|------|-------------|---------------|
+| Ch1.7 "one paragraph" | Authors write one paragraph *per chapter* or use a bulleted list | Count paragraphs in Section 1.7; must be exactly 1 |
+| Ch5 cross-references | Authors use step numbers instead of section/table/figure numbers | Search Ch5 for "Step 1", "Step 2" etc. — these should be replaced with "Section 4.x", "Table 4.x" |
+| Ch6 Summary section | Authors end after Future Research without a closing summary | Check that Ch6 has a final Summary subsection |
+| Deliverable name consistency | Minor wording differences across Ch1, Ch3 method table, and Ch4 headings | Compare exact strings |
+| Ch3/Ch4 activity/outcome bleed | Activities leak into Ch4 or outcomes leak into Ch3 | Look for process verbs in Ch4 ("we conducted", "we searched") or result statements in Ch3 |
+
+### Automation
+
+For markdown-based reports, the `scripts/evaluate_report.py` script can auto-check approximately 15 of the 25 checklist items. Run it against your chapter files:
+
+```bash
+python scripts/evaluate_report.py path/to/TIM_Report_Draft/
+```
+
+The remaining items require human or AI judgment (e.g., "Ch5 organized around 2-3 strongest takeaways").
+
+---
+
+## 8. Final Submission Checklist
+
+Use this checklist as the last step before submitting your report. These are formatting and mechanical checks — content should already be finalized.
+
+### Document Formatting
+- [ ] 12pt standard font throughout (no fanciful typestyles)
+- [ ] Double-spaced text (footnotes and long quotations may be single-spaced)
+- [ ] One-sided printing
+- [ ] Margins: 1.5" left, 1" top/right/bottom
+- [ ] **Landscape pages:** When a page is rotated to landscape, the 1.5" binding margin moves to the TOP of the landscape page (not the left). This is from the Carleton formatting guidelines.
+
+### Pagination
+- [ ] Title page = implied "i", number NOT printed
+- [ ] Preliminary pages: Roman numerals (ii, iii, iv…)
+- [ ] Body pages: Arabic numerals starting at 1
+- [ ] Page numbers consecutive through text, illustrations, bibliography, and appendices to the last page
+
+### Auto-Generated Lists
+- [ ] Table of Contents generated from heading styles (not manually typed)
+- [ ] List of Tables generated from Insert Caption
+- [ ] List of Figures generated from Insert Caption
+- [ ] List of Appendices present (if appendices exist)
+- [ ] All cross-references use field codes (not manually typed numbers)
+- [ ] **Final update performed:** Ctrl+A → F9 (or equivalent), then right-click ToC → Update Entire Table
+
+### Title Page
+- [ ] Title reflects subject clearly; no abbreviations, formulas, or Greek letters
+- [ ] Student name matches Carleton registration (first name last name order)
+- [ ] Correct required statement (project vs. thesis version)
+- [ ] Program name matches official graduate calendar name
+- [ ] Copyright line: © [Year] [Student Name]
+
+### References
+- [ ] Every in-text citation has a corresponding reference list entry
+- [ ] Every reference list entry is cited at least once in the text
+- [ ] **"Each reference is complete and correct"** (from guideline) — verify author names, year, title, journal/publisher, volume, pages, DOI
+- [ ] Consistent citation style throughout (AoM recommended; confirm with supervisor)
+- [ ] Reference list in alphabetical order by first author's last name
+
+### Final Quality
+- [ ] No orphan headings (heading at bottom of page with text on next page)
+- [ ] All tables and figures have captions and are referenced in the text
+- [ ] Appendices each start on a new page
+- [ ] Abstract ≤ 150 words with no undefined abbreviations
+
+---
+
+## 9. Document Management Workflow
+
+This section describes how to maintain markdown drafts alongside the .docx submission file. This workflow is optional — if you write directly in Word, skip to the "Handling Supervisor Feedback" subsection, which applies regardless of your writing tool.
+
+### Recommended Setup
+
+| Component | Purpose |
+|-----------|---------|
+| `TIM_Report_Draft/*.md` | Content source — where you write and revise |
+| `TIM_Project_Report_[Name]_[Date].docx` | Submission artifact — formatted for printing and grading |
+
+The markdown files are your single source of truth for content. The .docx file is the delivery format.
+
+### When to Edit Markdown vs. .docx
+
+| Scenario | Edit Where | Then |
+|----------|-----------|------|
+| Writing new content | Markdown | Sync to .docx |
+| Restructuring sections | Markdown | Sync to .docx |
+| Fixing formatting (margins, fonts, spacing) | .docx only | No sync needed |
+| Applying supervisor feedback on content | Markdown first, then sync | Keep markdown as source of truth |
+| Applying supervisor feedback on formatting | .docx only | No sync needed |
+| Final pre-submission polish | .docx only | No sync needed |
+
+### Sync Approaches
+
+**1. Programmatic full replacement** (most reliable for major updates):
+Use a script that reads the markdown files and writes complete chapter content into the .docx, preserving styles and formatting. Best when the entire chapter has changed.
+
+**2. Targeted edits** (for small changes):
+Use the AI agent's document editing skill to find and replace specific passages in the .docx. Best for sentence-level revisions after the document structure is stable.
+
+**3. Manual copy-paste** (simplest):
+Copy the relevant text from the markdown file and paste it into the .docx, then reapply formatting. Best for one-off fixes when tooling is unavailable.
+
+### Handling Supervisor Feedback
+
+Supervisor feedback typically arrives as comments or tracked changes in the .docx file.
+
+**Recommended workflow:**
+1. **Read the feedback** in Word or export to a readable format
+2. **Triage each comment:** accept, reject, or discuss
+3. **Apply accepted changes** to your markdown source files first
+4. **Sync** the updated markdown back to the .docx
+5. **Resolve the comments** in the .docx to keep the document clean
+
+**Note for non-technical users:** If you write directly in Word, apply feedback directly in the .docx using Track Changes. The supervisor feedback handling tips above (triage, accept/reject, resolve comments) still apply.

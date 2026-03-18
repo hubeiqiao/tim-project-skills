@@ -78,9 +78,32 @@ Examples:
 
 | Skill | What it helps with | Example prompt |
 | --- | --- | --- |
-| `tim-project-guide` | TIM project report structure, formatting, and chapter expectations | `Use $tim-project-guide to review my chapter order and formatting.` |
+| `tim-project-guide` | TIM project report structure, formatting, chapter expectations, evaluation checklist, and reusable scripts | `Use $tim-project-guide to evaluate my completed TIM report.` |
 | `g1-slide-deck-guide` | TIM Gate 1 slide deck structure, required content, and review guidance | `Use $g1-slide-deck-guide to check whether my slides match the G1 format.` |
 | `python-docx-style-id-mismatch` | Fix the `python-docx` style-name vs style-ID bug | `Use $python-docx-style-id-mismatch to fix my custom heading insertion script.` |
+
+### Scripts (`tim-project-guide`)
+
+The `tim-project-guide` skill includes three Python scripts in `skills/tim-project-guide/scripts/`:
+
+| Script | What it does | Requirements |
+| --- | --- | --- |
+| `evaluate_report.py` | Auto-checks ~15 checklist items on markdown chapter files. PASS/FAIL output with evidence. | Python 3.8+ (stdlib only) |
+| `generate_shell.py` | Creates markdown skeleton files with all required section headings. Configurable approach, step count, and deliverable count. | Python 3.8+ (stdlib only) |
+| `verify_docx.py` | Converts .docx to markdown via pandoc, runs evaluation checks, and compares against markdown drafts for sync issues. | Python 3.8+ and pandoc |
+
+**Example usage:**
+
+```bash
+# Evaluate markdown drafts
+python scripts/evaluate_report.py path/to/TIM_Report_Draft/
+
+# Generate a report shell with 6 method steps and 4 deliverables
+python scripts/generate_shell.py --steps 6 --deliverables 4 output/
+
+# Verify a .docx against markdown drafts
+python scripts/verify_docx.py report.docx --drafts path/to/TIM_Report_Draft/
+```
 
 ## Troubleshooting
 

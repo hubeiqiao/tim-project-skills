@@ -23,7 +23,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Crosshatch texture from design system */
+  /* Crosshatch texture — design system Section 7 */
   body::before {
     content: '';
     position: absolute;
@@ -33,7 +33,7 @@
     z-index: 10;
   }
 
-  /* Single card — 40pt (53px) safe border on all sides */
+  /* Card — 40pt safe border → card is 1174x534 centered */
   .card {
     position: relative;
     z-index: 1;
@@ -51,104 +51,146 @@
     overflow: hidden;
   }
 
-  /* Hero gradient accent bar */
+  /* Gradient accent — thicker for visibility */
   .card::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #0071e3, #00b4d8, #34d399);
+    height: 5px;
+    background: linear-gradient(90deg, #0071e3, #00b4d8, #34d399, #059669);
     border-radius: 18px 18px 0 0;
   }
 
-  /* GitHub icon + title row */
-  .icon-row {
-    display: flex;
+  /* Badge — hero card metadata pattern */
+  .badge {
+    display: inline-flex;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 22px;
+    gap: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #6e6e73;
+    background: #f0f0f2;
+    border-radius: 100px;
+    padding: 5px 14px;
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
   }
 
-  .github-icon { width: 52px; height: 52px; }
+  .badge svg { flex-shrink: 0; }
 
-  /* Sora 800, -0.03em tracking — from design tokens */
+  /* Title — Sora 800, -0.03em */
   .title {
     font-family: 'Sora', sans-serif;
-    font-size: 52px;
+    font-size: 50px;
     font-weight: 800;
     letter-spacing: -0.03em;
     color: #1d1d1f;
     line-height: 1;
+    margin-bottom: 16px;
   }
 
-  /* DM Sans body — secondary text color #86868b */
+  /* Subtitle — DM Sans, secondary text #86868b */
   .subtitle {
     font-family: 'DM Sans', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #86868b;
-    line-height: 1.55;
+    line-height: 1.5;
     margin-bottom: 28px;
   }
 
-  /* Pills from design system: DM Sans 600, #f0f0f2 bg, #6e6e73 text, radius 100px */
+  /* Pills — each with a colored accent dot */
   .pills-wrap {
     display: flex;
-    gap: 0;
-    margin-bottom: 30px;
+    gap: 8px;
+    margin-bottom: 32px;
   }
 
   .pill {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-family: 'DM Sans', sans-serif;
     font-size: 13px;
     font-weight: 600;
-    color: #6e6e73;
+    color: #1d1d1f;
     background: #f0f0f2;
     border-radius: 100px;
-    padding: 7px 16px;
-    margin: 0 3px;
+    padding: 7px 16px 7px 12px;
     white-space: nowrap;
   }
 
-  /* Install command — tertiary text #aeaeb2, primary bold #1d1d1f */
-  .install {
-    font-family: 'DM Sans', monospace;
-    font-size: 16px;
-    font-weight: 500;
-    color: #aeaeb2;
-    background: #f5f5f7;
-    padding: 12px 28px;
-    border-radius: 10px;
+  .pill .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
   }
 
-  .install span {
-    color: #1d1d1f;
-    font-weight: 700;
+  .dot-blue { background: #0071e3; }
+  .dot-cyan { background: #00b4d8; }
+  .dot-green { background: #34d399; }
+  .dot-purple { background: #bf5af2; }
+
+  /* Install — dark card style from design system (quote card bg) */
+  .install {
+    background: #1d1d1f;
+    border-radius: 12px;
+    padding: 14px 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .install-prompt {
+    font-family: 'DM Sans', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    color: #86868b;
+  }
+
+  .install-cmd {
+    font-family: 'DM Sans', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f5f5f7;
   }
 </style>
 </head>
 <body>
 
 <div class="card">
-  <div class="icon-row">
-    <svg class="github-icon" viewBox="0 0 16 16" fill="none"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" fill="#1d1d1f"/></svg>
-    <div class="title">TIM Project Skills</div>
+
+  <!-- Badge — hero card metadata pattern -->
+  <div class="badge">
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" fill="#86868b"/></svg>
+    Open Source · AI Agent Skills
   </div>
 
+  <!-- Title -->
+  <div class="title">TIM Project Skills</div>
+
+  <!-- Subtitle -->
   <div class="subtitle">
-    AI agent skills for structuring, evaluating, and submitting<br>
+    Structure, evaluate, and submit<br>
     Carleton University TIM project reports
   </div>
 
+  <!-- Color-coded pills -->
   <div class="pills-wrap">
-    <span class="pill">Report Guide</span>
-    <span class="pill">25-Item Checklist</span>
-    <span class="pill">Gate 1 Slides</span>
-    <span class="pill">Python Scripts</span>
+    <span class="pill"><span class="dot dot-blue"></span>Report Guide</span>
+    <span class="pill"><span class="dot dot-cyan"></span>25-Item Checklist</span>
+    <span class="pill"><span class="dot dot-green"></span>Gate 1 Slides</span>
+    <span class="pill"><span class="dot dot-purple"></span>Python Scripts</span>
   </div>
 
-  <div class="install">npx skills add <span>hubeiqiao/tim-project-skills</span></div>
+  <!-- Install — dark terminal style -->
+  <div class="install">
+    <span class="install-prompt">$</span>
+    <span class="install-cmd">npx skills add hubeiqiao/tim-project-skills</span>
+  </div>
+
 </div>
 
 </body>

@@ -34,17 +34,17 @@
   .og-card {
     width: 1280px;
     height: 640px;
-    padding: 48px 64px;
+    padding: 40px 48px;
     display: flex;
     align-items: center;
-    gap: 48px;
+    gap: 40px;
     position: relative;
     overflow: hidden;
   }
 
   /* === LEFT SIDE === */
   .left {
-    flex: 0 0 460px;
+    flex: 0 0 440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +62,7 @@
 
   .title {
     font-family: 'Sora', sans-serif;
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 800;
     color: #1d1d1f;
     letter-spacing: -0.035em;
@@ -126,11 +126,11 @@
 
   .m-card {
     border-radius: 16px;
-    padding: 16px 18px;
+    padding: 22px 24px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 6px;
+    justify-content: flex-start;
+    gap: 10px;
     position: relative;
     overflow: hidden;
     background: #fff;
@@ -191,9 +191,9 @@
   .m-badge {
     display: inline-block;
     font-family: 'DM Sans', sans-serif;
-    font-size: 9px;
+    font-size: 13px;
     font-weight: 600;
-    padding: 3px 8px;
+    padding: 5px 12px;
     border-radius: 100px;
     margin-top: 6px;
     width: fit-content;
@@ -205,12 +205,12 @@
 
   .m-label {
     font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: #86868b;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 
   .m-num {
@@ -218,15 +218,15 @@
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1;
-    font-size: 32px;
+    font-size: 64px;
   }
 
   .m-sub {
     font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 500;
     color: #aeaeb2;
-    margin-top: 4px;
+    margin-top: 6px;
   }
 
   /* Mini Eval — checklist card */
@@ -237,7 +237,7 @@
 
   .m-eval-title {
     font-family: 'DM Sans', sans-serif;
-    font-size: 9px;
+    font-size: 13px;
     font-weight: 600;
     color: #86868b;
     text-transform: uppercase;
@@ -248,35 +248,35 @@
   .m-eval-items {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
   }
 
   .m-eval-item {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 7px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 9px;
+    font-size: 14px;
     font-weight: 500;
     color: #6e6e73;
   }
 
   .m-pass {
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 700;
     color: #fff;
     background: #34d399;
-    padding: 1px 5px;
+    padding: 2px 6px;
     border-radius: 3px;
     flex-shrink: 0;
   }
 
   .m-fail {
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 700;
     color: #fff;
     background: #ff6b6b;
-    padding: 1px 5px;
+    padding: 2px 6px;
     border-radius: 3px;
     flex-shrink: 0;
   }
@@ -294,7 +294,7 @@
 
   .m-phase-label {
     font-family: 'Sora', sans-serif;
-    font-size: 11px;
+    font-size: 17px;
     font-weight: 700;
     letter-spacing: -0.01em;
     margin-bottom: 3px;
@@ -302,7 +302,7 @@
 
   .m-phase-focus {
     font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: 600;
     color: #1d1d1f;
     margin-bottom: 8px;
@@ -317,13 +317,13 @@
   .m-pill {
     display: inline-block;
     font-family: 'DM Sans', sans-serif;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 600;
     color: #6e6e73;
     background: #f0f0f2;
     border-radius: 100px;
-    padding: 3px 7px;
-    margin: 2px 2px 2px 0;
+    padding: 5px 12px;
+    margin: 3px 4px 3px 0;
     white-space: nowrap;
   }
 
@@ -339,17 +339,17 @@
 
   .m-hl-num {
     font-family: 'Sora', sans-serif;
-    font-size: 40px;
+    font-size: 64px;
     font-weight: 800;
     color: #fff;
     letter-spacing: -0.03em;
     line-height: 1;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .m-hl-label {
     font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
+    font-size: 17px;
     font-weight: 600;
     color: rgba(255,255,255,0.85);
     line-height: 1.3;
@@ -363,7 +363,7 @@
     <div class="left">
       <div class="eyebrow">Agent Skills</div>
       <div class="title">TIM Project Skills</div>
-      <div class="subtitle">Let your AI coding agent structure, evaluate, and submit your Carleton TIM project report automatically.</div>
+      <div class="subtitle">Let your AI coding agent structure, evaluate, and review your Carleton TIM project report.</div>
       <div class="install-block">
         <span class="install-cmd">npx skills add hubeiqiao/tim-project-skills</span>
       </div>
@@ -402,9 +402,14 @@
             <div class="m-eval-item"><span class="m-pass">PASS</span> Deliverables match</div>
             <div class="m-eval-item"><span class="m-fail">FAIL</span> Ch1.7 one paragraph</div>
             <div class="m-eval-item"><span class="m-pass">PASS</span> Ch5 cross-references</div>
-            <div class="m-eval-item"><span class="m-pass">PASS</span> Every ch. has Summary</div>
+            <div class="m-eval-item"><span class="m-pass">PASS</span> Ch. summaries present</div>
             <div class="m-eval-item"><span class="m-pass">PASS</span> Ch4 past tense</div>
             <div class="m-eval-item"><span class="m-pass">PASS</span> Method-results mirror</div>
+            <div class="m-eval-item"><span class="m-pass">PASS</span> No opinions in Ch2</div>
+            <div class="m-eval-item"><span class="m-pass">PASS</span> Ch3 activities only</div>
+            <div class="m-eval-item"><span class="m-pass">PASS</span> Limitations → future</div>
+            <div class="m-eval-item"><span class="m-pass">PASS</span> Title page correct</div>
+            <div class="m-eval-item"><span class="m-pass">PASS</span> Roman/Arabic pages</div>
           </div>
         </div>
 

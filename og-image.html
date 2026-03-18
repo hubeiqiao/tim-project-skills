@@ -6,50 +6,74 @@
 <title>TIM Project Skills — OG Image</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
+    font-family: 'DM Sans', sans-serif;
     background: #f5f5f7;
-    font-family: 'DM Sans', system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
     width: 1280px;
     height: 640px;
     overflow: hidden;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
   }
 
+  /* Crosshatch texture from design system */
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(rgba(0,0,0,0.015) 0% 25%, transparent 0% 50%) 0 0 / 4px 4px;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Single card — 40pt (53px) safe border on all sides */
   .card {
-    width: 1200px;
-    height: 560px;
-    background: #ffffff;
-    border-radius: 24px;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    position: relative;
+    z-index: 1;
+    width: 1174px;
+    height: 534px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 60px 80px;
-    gap: 28px;
+    padding: 0 80px;
+    overflow: hidden;
   }
 
-  .top-row {
+  /* Hero gradient accent bar */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0071e3, #00b4d8, #34d399);
+    border-radius: 18px 18px 0 0;
+  }
+
+  /* GitHub icon + title row */
+  .icon-row {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
+    margin-bottom: 22px;
   }
 
-  .github-icon {
-    width: 48px;
-    height: 48px;
-  }
+  .github-icon { width: 52px; height: 52px; }
 
+  /* Sora 800, -0.03em tracking — from design tokens */
   .title {
-    font-family: 'Sora', system-ui, sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 52px;
     font-weight: 800;
     letter-spacing: -0.03em;
@@ -57,52 +81,57 @@
     line-height: 1;
   }
 
+  /* DM Sans body — secondary text color #86868b */
   .subtitle {
-    font-size: 20px;
-    color: #6e6e73;
-    line-height: 1.5;
-    max-width: 680px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #86868b;
+    line-height: 1.55;
+    margin-bottom: 28px;
   }
 
-  .features {
+  /* Pills from design system: DM Sans 600, #f0f0f2 bg, #6e6e73 text, radius 100px */
+  .pills-wrap {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 0;
+    margin-bottom: 30px;
   }
 
   .pill {
-    background: #f0f0f2;
-    color: #1d1d1f;
-    padding: 8px 18px;
-    border-radius: 20px;
-    font-size: 15px;
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
     font-weight: 600;
+    color: #6e6e73;
+    background: #f0f0f2;
+    border-radius: 100px;
+    padding: 7px 16px;
+    margin: 0 3px;
     white-space: nowrap;
   }
 
+  /* Install command — tertiary text #aeaeb2, primary bold #1d1d1f */
   .install {
-    margin-top: 4px;
     font-family: 'DM Sans', monospace;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
-    color: #86868b;
+    color: #aeaeb2;
     background: #f5f5f7;
     padding: 12px 28px;
-    border-radius: 12px;
-    letter-spacing: -0.01em;
+    border-radius: 10px;
   }
 
   .install span {
     color: #1d1d1f;
-    font-weight: 600;
+    font-weight: 700;
   }
 </style>
 </head>
 <body>
 
 <div class="card">
-  <div class="top-row">
+  <div class="icon-row">
     <svg class="github-icon" viewBox="0 0 16 16" fill="none"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" fill="#1d1d1f"/></svg>
     <div class="title">TIM Project Skills</div>
   </div>
@@ -112,7 +141,7 @@
     Carleton University TIM project reports
   </div>
 
-  <div class="features">
+  <div class="pills-wrap">
     <span class="pill">Report Guide</span>
     <span class="pill">25-Item Checklist</span>
     <span class="pill">Gate 1 Slides</span>

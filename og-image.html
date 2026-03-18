@@ -3,26 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=1280">
-<title>TIM Project Skills — OG</title>
+<title>TIM Project Skills — Social Preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
     font-family: 'DM Sans', sans-serif;
     background: #f5f5f7;
+    color: #1d1d1f;
     width: 1280px;
     height: 640px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     -webkit-font-smoothing: antialiased;
+    position: relative;
   }
 
+  /* Crosshatch texture */
   body::before {
     content: '';
     position: absolute;
@@ -32,93 +31,405 @@
     z-index: 10;
   }
 
-  .card {
-    position: relative;
-    z-index: 1;
-    width: 1174px;
-    height: 534px;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+  .og-card {
+    width: 1280px;
+    height: 640px;
+    padding: 48px 64px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    gap: 48px;
+    position: relative;
     overflow: hidden;
   }
 
-  /* Thick gradient strip — visible even at thumbnail */
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, #0071e3 0%, #00b4d8 40%, #34d399 70%, #059669 100%);
-    border-radius: 20px 20px 0 0;
+  /* === LEFT SIDE === */
+  .left {
+    flex: 0 0 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  /* Title — MASSIVE, readable at any size */
-  .title {
-    font-family: 'Sora', sans-serif;
-    font-size: 76px;
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    color: #1d1d1f;
-    line-height: 1;
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0071e3;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
     margin-bottom: 20px;
   }
 
-  .title span {
-    color: #0071e3;
+  .title {
+    font-family: 'Sora', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    color: #1d1d1f;
+    letter-spacing: -0.035em;
+    line-height: 1.0;
+    margin-bottom: 20px;
   }
 
-  /* Single tagline — large enough to read at thumbnail */
-  .tagline {
+  .subtitle {
     font-family: 'DM Sans', sans-serif;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 400;
     color: #86868b;
-    line-height: 1.4;
-    margin-bottom: 36px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    max-width: 400px;
   }
 
-  /* Install — dark block, high contrast, readable */
-  .install {
+  .install-block {
     background: #1d1d1f;
-    border-radius: 14px;
-    padding: 16px 36px;
+    border-radius: 12px;
+    padding: 14px 24px;
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    width: fit-content;
   }
 
-  .install-dollar {
-    font-family: 'DM Sans', monospace;
-    font-size: 17px;
-    font-weight: 600;
-    color: #555;
-  }
-
-  .install-text {
-    font-family: 'DM Sans', monospace;
-    font-size: 17px;
-    font-weight: 600;
-    color: #f5f5f7;
+  .install-cmd {
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    color: #34d399;
     letter-spacing: -0.01em;
+  }
+
+  .repo-url {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #aeaeb2;
+    margin-top: 18px;
+  }
+
+  /* === RIGHT SIDE — Mini bento preview === */
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .mini-bento {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 6px;
+    grid-template-areas:
+      "m-stat1  m-stat2  m-eval"
+      "m-ch1    m-hl     m-eval";
+  }
+
+  .m-card {
+    border-radius: 16px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  }
+
+  /* Mini Hero */
+  .m-hero {
+    grid-area: m-hero;
+    justify-content: center;
+  }
+
+  .m-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0071e3, #34d399);
+    border-radius: 16px 16px 0 0;
+  }
+
+  .m-hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    color: #0071e3;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+
+  .m-hero-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1d1d1f;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  .m-hero-sub {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #aeaeb2;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  .m-hero-date {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: #aeaeb2;
+    margin-top: 14px;
+  }
+
+  .m-badge {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 100px;
+    margin-top: 6px;
+    width: fit-content;
+  }
+
+  /* Mini Stat Cards */
+  .m-stat1 { grid-area: m-stat1; }
+  .m-stat2 { grid-area: m-stat2; }
+
+  .m-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #86868b;
+    margin-bottom: 6px;
+  }
+
+  .m-num {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    font-size: 32px;
+  }
+
+  .m-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: #aeaeb2;
+    margin-top: 4px;
+  }
+
+  /* Mini Eval — checklist card */
+  .m-eval {
+    grid-area: m-eval;
+    padding: 18px;
+  }
+
+  .m-eval-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    color: #86868b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  .m-eval-items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .m-eval-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    color: #6e6e73;
+  }
+
+  .m-pass {
+    font-size: 8px;
+    font-weight: 700;
+    color: #fff;
+    background: #34d399;
+    padding: 1px 5px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  .m-fail {
+    font-size: 8px;
+    font-weight: 700;
+    color: #fff;
+    background: #ff6b6b;
+    padding: 1px 5px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  /* Mini Category Cards */
+  .m-ch1 {
+    grid-area: m-ch1;
+    padding: 16px 18px;
+  }
+
+  .m-ch2 {
+    grid-area: m-ch2;
+    padding: 16px 18px;
+  }
+
+  .m-phase-label {
+    font-family: 'Sora', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 3px;
+  }
+
+  .m-phase-focus {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+  }
+
+  .m-pills-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .m-pill {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    color: #6e6e73;
+    background: #f0f0f2;
+    border-radius: 100px;
+    padding: 3px 7px;
+    margin: 2px 2px 2px 0;
+    white-space: nowrap;
+  }
+
+  /* Mini Highlight */
+  .m-hl {
+    grid-area: m-hl;
+    background: linear-gradient(145deg, #0071e3, #00b4d8);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+  }
+
+  .m-hl-num {
+    font-family: 'Sora', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .m-hl-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.3;
   }
 </style>
 </head>
 <body>
+  <div class="og-card">
 
-<div class="card">
-  <div class="title">TIM Project <span>Skills</span></div>
-  <div class="tagline">AI agent skills for Carleton TIM project reports</div>
-  <div class="install">
-    <span class="install-dollar">$</span>
-    <span class="install-text">npx skills add hubeiqiao/tim-project-skills</span>
+    <!-- LEFT SIDE -->
+    <div class="left">
+      <div class="eyebrow">Agent Skills</div>
+      <div class="title">TIM Project Skills</div>
+      <div class="subtitle">Let your AI coding agent structure, evaluate, and submit your Carleton TIM project report automatically.</div>
+      <div class="install-block">
+        <span class="install-cmd">npx skills add hubeiqiao/tim-project-skills</span>
+      </div>
+      <div class="repo-url">github.com/hubeiqiao/tim-project-skills</div>
+    </div>
+
+    <!-- RIGHT SIDE — Mini bento preview -->
+    <div class="right">
+      <div class="mini-bento">
+
+        <!-- Mini Stat 1: Guide -->
+        <div class="m-card m-stat1">
+          <div>
+            <div class="m-label">Report Guide</div>
+            <div class="m-num" style="color: #0071e3">9</div>
+            <div class="m-sub">Sections · Ch1–Ch6</div>
+          </div>
+          <span class="m-badge" style="background: rgba(0,113,227,0.1); color: #0071e3;">25 Checks</span>
+        </div>
+
+        <!-- Mini Stat 2: Scripts -->
+        <div class="m-card m-stat2">
+          <div>
+            <div class="m-label">Python Scripts</div>
+            <div class="m-num" style="color: #34d399">3</div>
+            <div class="m-sub">evaluate · generate · verify</div>
+          </div>
+          <span class="m-badge" style="background: rgba(52,211,153,0.1); color: #059669;">Stdlib Only</span>
+        </div>
+
+        <!-- Mini Eval: Checklist preview -->
+        <div class="m-card m-eval">
+          <div class="m-eval-title">Compliance Audit</div>
+          <div class="m-eval-items">
+            <div class="m-eval-item"><span class="m-pass">PASS</span> Abstract ≤ 150 words</div>
+            <div class="m-eval-item"><span class="m-pass">PASS</span> Deliverables match</div>
+            <div class="m-eval-item"><span class="m-fail">FAIL</span> Ch1.7 one paragraph</div>
+            <div class="m-eval-item"><span class="m-pass">PASS</span> Ch5 cross-references</div>
+            <div class="m-eval-item"><span class="m-pass">PASS</span> Every ch. has Summary</div>
+            <div class="m-eval-item"><span class="m-pass">PASS</span> Ch4 past tense</div>
+            <div class="m-eval-item"><span class="m-pass">PASS</span> Method-results mirror</div>
+          </div>
+        </div>
+
+        <!-- Mini Category: Method Templates -->
+        <div class="m-card m-ch1">
+          <div>
+            <div class="m-phase-label" style="color: #bf5af2">Method Templates</div>
+            <div class="m-phase-focus">10 DSR Patterns</div>
+          </div>
+          <div class="m-pills-wrap">
+            <span class="m-pill">Prototype</span>
+            <span class="m-pill">Framework</span>
+            <span class="m-pill">Synthesis</span>
+          </div>
+        </div>
+
+        <!-- Mini Highlight: Final Report -->
+        <div class="m-card m-hl">
+          <div class="m-hl-num">100+</div>
+          <div class="m-hl-label">Page Report Ready</div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
-</div>
-
 </body>
 </html>

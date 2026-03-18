@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=1280">
-<title>TIM Project Skills — OG Image</title>
+<title>TIM Project Skills — OG</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -23,174 +23,101 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Crosshatch texture — design system Section 7 */
   body::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: repeating-conic-gradient(rgba(0,0,0,0.015) 0% 25%, transparent 0% 50%) 0 0 / 4px 4px;
+    background: repeating-conic-gradient(rgba(0,0,0,0.012) 0% 25%, transparent 0% 50%) 0 0 / 4px 4px;
     pointer-events: none;
     z-index: 10;
   }
 
-  /* Card — 40pt safe border → card is 1174x534 centered */
   .card {
     position: relative;
     z-index: 1;
     width: 1174px;
     height: 534px;
     background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    box-shadow: 0 1px 12px rgba(0,0,0,0.06);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 80px;
     overflow: hidden;
   }
 
-  /* Gradient accent — thicker for visibility */
+  /* Thick gradient strip — visible even at thumbnail */
   .card::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #0071e3, #00b4d8, #34d399, #059669);
-    border-radius: 18px 18px 0 0;
+    height: 6px;
+    background: linear-gradient(90deg, #0071e3 0%, #00b4d8 40%, #34d399 70%, #059669 100%);
+    border-radius: 20px 20px 0 0;
   }
 
-  /* Badge — hero card metadata pattern */
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    color: #6e6e73;
-    background: #f0f0f2;
-    border-radius: 100px;
-    padding: 5px 14px;
-    margin-bottom: 16px;
-    letter-spacing: 0.02em;
-  }
-
-  .badge svg { flex-shrink: 0; }
-
-  /* Title — Sora 800, -0.03em */
+  /* Title — MASSIVE, readable at any size */
   .title {
     font-family: 'Sora', sans-serif;
-    font-size: 50px;
+    font-size: 76px;
     font-weight: 800;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
     color: #1d1d1f;
     line-height: 1;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
-  /* Subtitle — DM Sans, secondary text #86868b */
-  .subtitle {
+  .title span {
+    color: #0071e3;
+  }
+
+  /* Single tagline — large enough to read at thumbnail */
+  .tagline {
     font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #86868b;
-    line-height: 1.5;
-    margin-bottom: 28px;
-  }
-
-  /* Pills — each with a colored accent dot */
-  .pills-wrap {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 32px;
-  }
-
-  .pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    color: #1d1d1f;
-    background: #f0f0f2;
-    border-radius: 100px;
-    padding: 7px 16px 7px 12px;
-    white-space: nowrap;
-  }
-
-  .pill .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .dot-blue { background: #0071e3; }
-  .dot-cyan { background: #00b4d8; }
-  .dot-green { background: #34d399; }
-  .dot-purple { background: #bf5af2; }
-
-  /* Install — dark card style from design system (quote card bg) */
-  .install {
-    background: #1d1d1f;
-    border-radius: 12px;
-    padding: 14px 32px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .install-prompt {
-    font-family: 'DM Sans', monospace;
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 500;
     color: #86868b;
+    line-height: 1.4;
+    margin-bottom: 36px;
   }
 
-  .install-cmd {
+  /* Install — dark block, high contrast, readable */
+  .install {
+    background: #1d1d1f;
+    border-radius: 14px;
+    padding: 16px 36px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .install-dollar {
     font-family: 'DM Sans', monospace;
-    font-size: 14px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #555;
+  }
+
+  .install-text {
+    font-family: 'DM Sans', monospace;
+    font-size: 17px;
     font-weight: 600;
     color: #f5f5f7;
+    letter-spacing: -0.01em;
   }
 </style>
 </head>
 <body>
 
 <div class="card">
-
-  <!-- Badge — hero card metadata pattern -->
-  <div class="badge">
-    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" fill="#86868b"/></svg>
-    Open Source · AI Agent Skills
-  </div>
-
-  <!-- Title -->
-  <div class="title">TIM Project Skills</div>
-
-  <!-- Subtitle -->
-  <div class="subtitle">
-    Structure, evaluate, and submit<br>
-    Carleton University TIM project reports
-  </div>
-
-  <!-- Color-coded pills -->
-  <div class="pills-wrap">
-    <span class="pill"><span class="dot dot-blue"></span>Report Guide</span>
-    <span class="pill"><span class="dot dot-cyan"></span>25-Item Checklist</span>
-    <span class="pill"><span class="dot dot-green"></span>Gate 1 Slides</span>
-    <span class="pill"><span class="dot dot-purple"></span>Python Scripts</span>
-  </div>
-
-  <!-- Install — dark terminal style -->
+  <div class="title">TIM Project <span>Skills</span></div>
+  <div class="tagline">AI agent skills for Carleton TIM project reports</div>
   <div class="install">
-    <span class="install-prompt">$</span>
-    <span class="install-cmd">npx skills add hubeiqiao/tim-project-skills</span>
+    <span class="install-dollar">$</span>
+    <span class="install-text">npx skills add hubeiqiao/tim-project-skills</span>
   </div>
-
 </div>
 
 </body>
